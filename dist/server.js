@@ -15,7 +15,7 @@ Object.defineProperty(exports, "__esModule", { value: true });
 const mongoose_1 = __importDefault(require("mongoose"));
 require("dotenv/config");
 const app_1 = __importDefault(require("./app"));
-const PORT = 3000;
+const PORT = process.env.PORT || 3000;
 main().catch(err => console.log(err));
 function main() {
     return __awaiter(this, void 0, void 0, function* () {

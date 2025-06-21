@@ -7,7 +7,7 @@ exports.bookZodSchema = zod_1.z.object({
     author: zod_1.z.string(),
     genre: zod_1.z.enum(['FICTION', 'NON_FICTION', 'SCIENCE', 'HISTORY', 'BIOGRAPHY', 'FANTASY']),
     isbn: zod_1.z.string(),
-    description: zod_1.z.string(),
+    description: zod_1.z.string().optional().nullable(),
     copies: zod_1.z.number().positive(),
     available: zod_1.z.boolean().default(true)
 });

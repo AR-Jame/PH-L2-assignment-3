@@ -5,7 +5,6 @@ import { bookZodSchema } from "../validation/books.validation";
 
 export async function addBook(req: Request, res: Response, next: NextFunction) {
     try {
-        console.error('For debug', req.body);
         const body = bookZodSchema.parse(req.body);
         const result = await Book.create(body);
         res.send({
