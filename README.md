@@ -65,9 +65,12 @@ bun run src/index.ts
 
 | Method | Endpoint      | Description                              |
 | ------ | ------------- | ---------------------------------------- |
-| GET    | `/api/books`  | Fetch all books                          |
 | POST   | `/api/books`  | Add a new book                           |
-| GET    | `/api/borrow` | Get summary of all borrowed books        |
+| GET    | `/api/books`  | Fetch all books                          |
+| GET   | `/api/books/:bookId`  | Get a single book                           |
+| UPDATE    | `/api/books/:bookId` | Update a book by it's id        |
+| DELETE   | `/api/books/:bookId` |  Update a book by it's id |
+| GET    | `/api/borrow` | Get summary of all borrowed books         |
 | POST   | `/api/borrow` | Borrow a book (with quantity validation) |
 
 ---
